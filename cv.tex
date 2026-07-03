@@ -19,7 +19,6 @@
 
 \newcolumntype{C}{>{\centering\arraybackslash}X}
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
-\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
 
@@ -31,9 +30,9 @@
 
 \newenvironment{role}[4]
     {
-    \noindent\textbf{#1}\\[-1pt]
-    \begin{tabularx}{\linewidth}{@{}L R{1.75in}@{\hspace{1em}}R{1.35in}@{}}
-    \textit{#3} & #2 & \textit{#4} \\[-2pt]
+    \begin{tabularx}{\linewidth}{@{}L r@{}}
+    \textbf{#1} & \textit{#4} \\[-1pt]
+    \textit{#3} & #2 \\[-2pt]
     \end{tabularx}
     \begin{minipage}[t]{\linewidth}
     \begin{itemize}
